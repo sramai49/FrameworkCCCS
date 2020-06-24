@@ -248,6 +248,13 @@ public class WebDriverUtils {
 			driver.switchTo().defaultContent();
 		}
 		
+		public void enableCheckbox(By loc) {
+			WebElement e = find(loc);
+			if(!e.isSelected()) {
+				e.click();
+			}
+		}
+		
 		public void exit() {
 			try
 			{
@@ -260,5 +267,26 @@ public class WebDriverUtils {
 				ATUReports.add("Closing browser", LogAs.FAILED, new CaptureScreen(
 	                    ScreenshotOf.DESKTOP));
 			}
+		}
+
+//		public void enableCheckbox(By student_radioButton) {
+//			// TODO Auto-generated method stub
+//			
+//		}
+
+		public boolean exist(By realEstate_Lnk) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		public void scrolldown() {
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+			js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+			js.executeScript("h=document.body.scrollHeight");	
+			js.executeScript("window.scrollTo(0,h,)");
+		}
+		
+		public void waituntil() {
+			WebDriverWait wait=new WebDriverWait(driver,30);
 		}
 }

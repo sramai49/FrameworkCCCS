@@ -5,16 +5,16 @@ import com.clearcode.utils.ExcelUtils;
 
 public class LoginData {
 	int a=2;
-	@DataProvider
-	public Object[][] negativeLogin(){
-		return ExcelUtils.getData("TestData.xls", "NegativeLogin");
+	@DataProvider (name="RealEstateLoginData")
+	public Object[][] RealEstate(){
+		return ExcelUtils.getData("TestData.xls", "RealEstateLogin");
 	}
 	
 	@DataProvider
-	public Object[][] CreatePatient(){
+	public Object[][] ContactUS(){
 		return new Object[][] { 
 			new Object[] {
-			ExcelUtils.data("SuiteData.xls", "Sheet1", "createPatient").toArray() }
+			ExcelUtils.data("SuiteData.xls", "Sheet1", "ContactUS").toArray() }
 			};
 	}
 	
