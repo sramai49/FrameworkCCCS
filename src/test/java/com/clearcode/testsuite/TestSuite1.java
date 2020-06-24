@@ -30,12 +30,7 @@ public class TestSuite1 extends TestSetup{
 		//wdu.type(PatientPage.fname_ip, data[3]);
 		//wdu.type(PatientPage.lname_ip, data[4]);
 		
-//		if(wdu.exist(RealEstatePage.RealEstate_Lnk)); {
-//			wdu.click(RealEstatePage.RealEstate_Lnk);
-//		}
-//		Thread.sleep(5000);
-		//WebDriver driver=new ChromeDriver();
-		//scrolldown();	
+
 		wdu.type(RealEstatePage.your_name,name);
 		wdu.type(RealEstatePage.email_address,email_id);
 		wdu.type(RealEstatePage.subject,Subject);
