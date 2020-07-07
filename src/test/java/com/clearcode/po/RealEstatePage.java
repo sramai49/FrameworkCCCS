@@ -13,7 +13,7 @@ public class RealEstatePage {
 	public static By subject=By.name("subject");
 	public static By message=By.name("id:comments");
 	public static By send_btn=By.xpath("//input[@type='submit']");
-	public static By error_msg=By.xpath("//div[@class='wpcf7-response-output wpcf7-display-none wpcf7-validation-errors']");
+	public static By error_msg=By.xpath("//div[contains(@class,'wpcf7-response-output wpcf7-display-none wpcf7-validation-errors')]");
 	
 	
 	

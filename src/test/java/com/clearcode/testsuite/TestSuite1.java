@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -14,6 +15,10 @@ import com.clearcode.po.MenuBar;
 import com.clearcode.po.PatientPage;
 import com.clearcode.po.RealEstatePage;
 
+import atu.testng.reports.ATUReports;
+import atu.testng.reports.logging.LogAs;
+import atu.testng.selenium.reports.CaptureScreen;
+import atu.testng.selenium.reports.CaptureScreen.ScreenshotOf;
 import dataProvider.LoginData;
 
 public class TestSuite1 extends TestSetup{
@@ -36,10 +41,16 @@ public class TestSuite1 extends TestSetup{
 		wdu.type(RealEstatePage.subject,Subject);
 		wdu.type(RealEstatePage.message,Message);
 		wdu.click(RealEstatePage.send_btn);
-		if(wdu.exist(RealEstatePage.error_msg)); {
-			System.out.println("Try to send mail for invalid mail ID");;
+		wdu.exist(RealEstatePage.error_msg);
+		//wdu.assertText(RealEstatePage.error_msg,"One or more fields have an error. Please check and try again.");
+		if(wdu.exist(RealEstatePage.error_msg)) {
+			System.out.println("Pass");;
+			
+		}else
+		{		
+			System.out.println("Fail");
+			
 		}
-		
 		
 		
 		

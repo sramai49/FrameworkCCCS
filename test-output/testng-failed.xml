@@ -8,7 +8,7 @@
           <include name="launch"/>
           <include name="close"/>
           <include name="loadUrl"/>
-          <include name="CreateStudent"/>
+          <include name="CreateStudent" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.clearcode.testsuite.TestSuite1 -->
     </classes>
